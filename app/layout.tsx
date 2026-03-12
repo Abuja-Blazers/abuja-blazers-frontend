@@ -20,29 +20,13 @@ const inter = Inter({
 
 const satoshi = localFont({
   src: [
-    {
-      path: "/public/fonts/Satoshi-Light.otf",
-      weight: "350",
-      style: "normal"
-    },
-    {
-      path: "/public/fonts/Satoshi-Black.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "/public/fonts/Satoshi-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "/public/fonts/Satoshi-Bold.otf",
-      weight: "700",
-      style: "normal"
-    }
+    { path: "../public/fonts/Satoshi-Light.otf", weight: "350", style: "normal" },
+    { path: "../public/fonts/Satoshi-Black.otf", weight: "400", style: "normal" },
+    { path: "../public/fonts/Satoshi-Medium.otf", weight: "500", style: "normal" },
+    { path: "../public/fonts/Satoshi-Bold.otf", weight: "700", style: "normal" },
   ],
   variable: "--font-satoshi",
-  display: "swap"
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${satoshi.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${satoshi.variable} antialiased`}>{children}</body>
     </html>
   );
 }
