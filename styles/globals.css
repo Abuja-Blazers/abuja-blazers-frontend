@@ -2,7 +2,10 @@
 @import "./tokens.css";
 @import "./utilities.css";
 
-html {
-  font-size: 80%;
-  line-height: normal;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 80%;
+    line-height: normal;
+  }
 }
