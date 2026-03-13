@@ -1,7 +1,5 @@
-@reference "./tokens.css";
-
 @utility font-* {
-  font-size: --value(--typo-*--font-size);
+  font-size: --value(--typo-*);
   font-family: --value(--typo-*--font-family);
   line-height: --value(--typo-*--line-height);
   letter-spacing: --value(--typo-*--letter-spacing);
@@ -11,7 +9,7 @@
 @utility btn {
   color: --theme(--color-white);
   border-radius: --theme(--radius);
-  transition-property: color, background-color, border-color, scale, translate;
+  transition-property: color, background-color, border-color, transform, text-shadow;
   transition-duration: 300ms;
   transition-timing-function: ease;
   border: 1px solid transparent;
@@ -19,7 +17,14 @@
   font-weight: 500;
 
   &:active {
-    scale: 0.98;
+    transform: scale(0.98);
+  }
+
+  &:hover {
+    transform: scale(0.95);
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.35),
+      0 0 12px rgba(255, 92, 0, 0.45);
   }
 
   & > svg:first-child {
@@ -37,7 +42,7 @@
   color: --value(--btn-variant-*--text);
   background-color: --value(--btn-variant-*);
   border-color: --value(--btn-variant-*--border);
-  padding: --value(--btn-size-*);
+  /* padding: --value(--btn-size-*); */
 
   @variant hover {
     background-color: --value(--btn-variant-*--hover);

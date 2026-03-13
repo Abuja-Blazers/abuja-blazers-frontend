@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-@theme inline reference {
+@theme inline {
   --color-white: #ffffff;
   --color-black: #000000;
 
@@ -33,25 +33,30 @@
 
   --color-yellow-100: #FFC800;
   --color-yellow-200: #302A1B;
+
+  --spacing: 1px;
 }
 
-@theme inline reference {
+@theme inline {
     --shadow-outer-card: 0px 6px 9.2px 0px #00000073;
     
     --typo-label: .875rem;
     --typo-label--line-height: 1;
     --typo-label--letter-spacing: .16em;
     --typo-label--font-family: var(--font-satoshi);
+    --typo-label--font-weight: 400;
 
     --typo-label-xs: .75rem;
     --typo-label-xs--line-height: 1;
     --typo-label-xs--letter-spacing: 0px;
     --typo-label-xs--font-family: var(--font-satoshi);
+    --typo-label-xs--font-weight: 400;
 
     --typo-heading: 1rem;
     --typo-heading--line-height: 1;
     --typo-heading--letter-spacing: 0px;
     --typo-heading--font-family: var(--font-satoshi);
+    --typo-heading--font-weight: 400;
 
     --typo-title: 1.125rem;
     --typo-title--line-height: 1;
@@ -62,13 +67,16 @@
     --typo-title-lg: 1.313rem;
     --typo-title-lg--line-height: 1;
     --typo-title-lg--letter-spacing: .01em;
-    --typo-title-lg--font-weight: 700;
+    --typo-title-lg--font-family: var(--font-satoshi);
+    --typo-title-lg--font-weight: 400;
 
     --typo-caption: .75rem;
     --typo-caption--line-height: 1;
+    --typo-caption--font-family: var(--font-satoshi);
     --typo-caption--letter-spacing: 0px;
+    --typo-caption--font-weight: 400;
 
-    --typo-button--font-size: 0.875rem;
+    --typo-button: 0.875rem;
     --typo-button--line-height: 1.225rem;
     --typo-button--letter-spacing: 0;
     --typo-button--font-family: var(--font-satoshi);
@@ -76,7 +84,11 @@
 }
 
 
-@theme inline reference {
-    --btn-variant-primary: var(--color-stc-200);
-    --btn-variant-primary-hover: var(--color-stc-100);
+@theme inline {
+--btn-variant-primary: var(--color-stc-200);
+--btn-variant-primary--hover: var(--color-stc-100);
+--btn-variant-primary--text: var(--color-white);
+--btn-variant-primary--border: transparent;
+--btn-variant-primary--disabled: var(--color-grey-75);
+--btn-variant-primary--text-disabled: var(--color-grey-250);
 }
