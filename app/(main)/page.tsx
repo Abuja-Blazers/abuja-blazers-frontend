@@ -2,15 +2,21 @@ import Link from "next/link";
 import { ArrowRight, CircleArrowRight } from "lucide-react";
 import Image from "next/image";
 import WhatsappJoinImage from "@/app/assets/images/whatsapp.webp"
-import { dummyCollection } from "@/utils/data";
+import ShoeAd from "@/app/assets/images/shoe-ad.webp"
+import { dummyCollection, playerMarket, players } from "@/utils/data";
 import CollectionCard from "@/components/CollectionCard";
 import clsx from "clsx";
+import SectionHeader from "@/components/SectionHeader";
+import PlayerCard from "@/components/PlayerCard";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/Table";
+import Initials from "@/components/Initials";
+import { StatusBadge } from "@/components/StatusBadge";
 
 
 export default function Home() {
     return (
         <div className="pb-20 bg-grey-400">
-            <div className="relative min-h-dvh bg-[url('@/app/assets/images/home-background.webp')] bg-cover bg-center flex items-center justify-center">
+            <section className="relative min-h-dvh bg-[url('@/app/assets/images/home-background.webp')] bg-cover bg-center flex items-center justify-center">
                 <div className="absolute inset-0 bg-black/80"></div>
 
                 <div className="relative max-w-4xl w-full">
@@ -45,9 +51,9 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className="min-h-dvh pt-30 px-45 flex flex-col gap-92">
+            <section className="min-h-dvh py-30 px-45 flex flex-col gap-92">
                 <Link href="" className="mx-auto grid place-content-center">
                     <Image
                         src={WhatsappJoinImage}
@@ -57,24 +63,12 @@ export default function Home() {
                     />
                 </Link>
                 <div className="flex flex-col gap-54">
-                    <div className="flex justify-between w-full">
-                        <div className="flex flex-col max-w-280">
-                            <p className="font-button uppercase text-stc-200">
-                                Official Store
-                            </p>
-                            <h1 className="uppercase font-satoshi text-[2.5rem] font-[900] leading-none tracking-[-0.03em] text-grey-200">
-                                Shop the Collection
-                            </h1>
-                        </div>
-                        <Link
-                            href="/shop"
-                            className="self-end btn text-stc-200 uppercase"
-                        >
-                            
-                            View all Products
-                            <ArrowRight className="size-18 text-inherit" />
-                        </Link>
-                    </div>
+                    <SectionHeader
+                        eyebrow="Official Store"
+                        title="Shop the Collection"
+                        linkHref="/shop"
+                        linkLabel="View All Products"
+                    />
                     
                     <div className="grid grid-cols-3 gap-20 items-stretch">
                         {dummyCollection.map((value, index) => (
@@ -87,7 +81,78 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section className="py-50 px-45 flex flex-col gap-60">
+                <SectionHeader
+                    eyebrow="The Squad"
+                    title="Meet the blazers"
+                    linkHref="/blazers"
+                    linkLabel="Full Roster"
+                    description="Athletes. Leaders. Game changers. Get to know the team driving the Blazers to glory."
+                />
+                <div className="grid grid-cols-3 gap-y-30 gap-x-20">
+                    {players.map((player, index) => (
+                        <PlayerCard key={index} {...player} />
+                    ))}
+                </div>
+            </section>
+
+            <section className="min-h-dvh pt-60 px-45 flex flex-col gap-70">
+                <SectionHeader
+                    eyebrow="Transfer Market"
+                    title="Player Market"
+                    description="Explore available players, submit bids, and track transfer activity in real time."
+                    linkHref="/player-market"
+                    linkLabel="All Listings"
+                />
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead>Player</TableHead>
+                            <TableHead>Appearances</TableHead>
+                            <TableHead>Status</TableHead>
+                            <TableHead></TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {playerMarket.map((player, index) => (
+                            <TableRow key={index}>
+                                <TableCell className="flex gap-10 items-center">
+                                    <Initials name={player.metadata.name} className="size-34"/>
+                                    <span className="flex flex-col gap-5">
+                                        <span className="font-title-lg font-bold tracking-normal text-grey-200 capitalize">
+                                            {player.metadata.name}
+                                        </span>
+                                        <span className="font-label tracking-normal leading-none uppercase text-grey-25">
+                                            {player.metadata.position}
+                                        </span>
+                                    </span>
+                                </TableCell>
+                                <TableCell>
+                                    <span className="font-button tracking-[.01em] text-[#CCCCCC]">{player.appearances}</span>
+                                </TableCell>
+                                <TableCell><StatusBadge text={player.status} /></TableCell>
+                                <TableCell><Link href={`/player-market/${player.id}`} className="btn p-10 inline-flex font-button text-stc-200 font-medium uppercase rounded-[3px] border border-stc-200 min-w-77">View</Link></TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </section>
+
+            <section className="min-h-dvh px-45 flex flex-col gap-92">
+                <Link href="" className="mx-auto grid place-content-center">
+                    <Image
+                        src={ShoeAd}
+                        className="h-auto object-cover hover:scale-98 active:scale-98 duration-300 ease-in-out"
+                        alt=""
+                        width={680}
+                    />
+                </Link>
+                <div className="pb-50 px-45">
+
+                </div>
+            </section>
         </div>
     )
 }

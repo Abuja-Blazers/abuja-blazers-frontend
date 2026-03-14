@@ -27,7 +27,7 @@ export const NavBar = () => {
                             <Link
                                 key={route}
                                 href={route}
-                                className="btn p-10 h-40 inline-flex font-button font-medium uppercase"
+                                className="btn p-10 h-40 inline-flex font-button hover:text-stc-200 font-medium uppercase"
                             >
                                 {label}
                             </Link>

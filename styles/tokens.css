@@ -12,6 +12,7 @@
   --color-grey-200: #FAFAFA;
   --color-grey-250: #AAAAAA;
   --color-grey-300: #2C2C2C;
+  --color-grey-350: #272727;
   --color-grey-400: #111111;
   --color-grey-500: #1A1A1A;
   --color-grey-600: #242424;
@@ -35,7 +36,7 @@
   --color-yellow-200: #302A1B;
 
   --spacing: 1px;
-  --size-2xs: 10px;
+  --radius-2xs: .625rem;
 }
 
 @theme inline {
