@@ -78,6 +78,12 @@
     --typo-title-lg--font-family: var(--font-satoshi);
     --typo-title-lg--font-weight: 400;
 
+    --typo-lg:  2.5rem;
+    --typo-lg--line-height: 1;
+    --typo-lg--letter-spacing: -0.03em;
+    --typo-lg--font-family: var(--font-satoshi);
+    --typo-lg--font-weight: 900;
+
     --typo-caption: .75rem;
     --typo-caption--line-height: 1;
     --typo-caption--font-family: var(--font-satoshi);

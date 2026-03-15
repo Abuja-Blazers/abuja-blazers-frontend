@@ -1,5 +1,5 @@
-import Jersey from "@/app/assets/images/jersey.webp"
 import BaseballHat from "@/app/assets/images/baseball-hat.webp";
+import Jersey from "@/app/assets/images/jersey.webp";
 
 export const formatCurrency = (amount: number, currency = "NGN") =>
   new Intl.NumberFormat("en-NG", {
@@ -8,18 +8,24 @@ export const formatCurrency = (amount: number, currency = "NGN") =>
   }).format(amount);
 
 export function formatInitials(name: string): string {
-    return name
-        .trim()
-        .split(/\s+/)
-        .map((word) => word[0].toUpperCase())
-        .join("");
+  return name
+    .trim()
+    .split(/\s+/)
+    .map((word) => word[0].toUpperCase())
+    .join("");
 }
 
 export const dummyCollection = [
-    { tag: "New Season", image: Jersey, clothingType: "jersey", title: "Blazers Home Kit 2025 — Orange Edition", price: 30000 },
-    { image: Jersey, clothingType: "apparel", title: "Blazers Demons Slayer T-Shirt", price: 18000 },
-    { tag: "Bestseller", image: BaseballHat, clothingType: "headwear", title: "Blazers Snapback Cap", price: 20000 }
-]
+  {
+    tag: "New Season",
+    image: Jersey,
+    clothingType: "jersey",
+    title: "Blazers Home Kit 2025 — Orange Edition",
+    price: 30000,
+  },
+  { image: Jersey, clothingType: "apparel", title: "Blazers Demons Slayer T-Shirt", price: 18000 },
+  { tag: "Bestseller", image: BaseballHat, clothingType: "headwear", title: "Blazers Snapback Cap", price: 20000 },
+];
 
 export const players = [
   { title: "wide receiver", name: "Ali J", position: "7" },
@@ -27,13 +33,12 @@ export const players = [
   { title: "wide receiver", name: "tolu", position: "27" },
   { title: "corner", name: "valerie", position: "31" },
   { title: "wide receiver", name: "mizu", position: "4" },
-  { title: "centre back", name: "olaolu", position: "39" }
-]
-
+  { title: "centre back", name: "olaolu", position: "39" },
+];
 
 export const playerMarket = [
   { id: "1", metadata: { name: "Valerie", position: "corner" }, appearances: 8, status: "available" },
   { id: "2", metadata: { name: "Hassan Abdullahi", position: "safety" }, appearances: 4, status: "negotiating" },
   { id: "3", metadata: { name: "Judy", position: "wide receiver" }, appearances: 8, status: "available" },
   { id: "4", metadata: { name: "Psycho", position: "centre" }, appearances: 11, status: "available" },
-]
+];

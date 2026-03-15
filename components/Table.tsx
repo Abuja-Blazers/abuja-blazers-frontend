@@ -4,14 +4,10 @@ import { ComponentProps } from "react";
 export function Table({ ...props }: ComponentProps<"table">) {
   return (
     <div className="w-full overflow-x-auto rounded-lg">
-      <table
-        {...props}
-        className="w-full border-separate border-spacing-0 border border-grey-600 bg-grey-400"
-      />
+      <table {...props} className="w-full border-separate border-spacing-0 border border-grey-600 bg-grey-400" />
     </div>
   );
 }
-
 
 export function TableHeader({ ...props }: ComponentProps<"thead">) {
   return <thead className="rounded-lg bg-grey-600" {...props} />;

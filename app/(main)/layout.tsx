@@ -1,16 +1,12 @@
-import { NavBar } from "@/components/NavBar"
+import Footer from "@/components/Footer";
+import { NavBar } from "@/components/NavBar";
 
-export default function MainLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="relative">
       <NavBar />
-      <main>
-        {children}
-      </main>
-    </>
-  )
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
 }

@@ -4,7 +4,7 @@
   "experimentalSortImports": {},
   "experimentalSortPackageJson": true,
   "experimentalTailwindcss": {
-    "stylesheet": "src/styles/globals.css",
+    "stylesheet": "src/styles/globals.css"
     // "functions": ["cva", "cx"]
   },
   "printWidth": 120
