@@ -7,6 +7,7 @@ import { useState } from "react";
 import Facilties from "@/app/assets/vectors/facilities.svg";
 import Football from "@/app/assets/vectors/football.svg";
 import { SupportCard } from "@/components/SupportCard";
+import { HeroSection } from "@/components/HeroSection";
 
 export default function DonatePage() {
   const [customAmount, setCustomAmount] = useState("");
@@ -19,20 +20,13 @@ export default function DonatePage() {
   };
   return (
     <div className="bg-grey-800">
-      <section className="px-45 py-57 flex flex-col gap-8 items-start justify-center border-y border-y-grey-300 bg-[linear-gradient(0deg,rgba(17,17,17,0.2),rgba(17,17,17,0.2)),linear-gradient(267.06deg,rgba(255,92,0,0.21)_23.55%,rgba(17,17,17,0.3)_64.33%)] backdrop-blur-[100px]">
-        <p className="font-button leading-none uppercase text-stc-200">Support the Team</p>
-        <div className="max-w-309">
-          <h1 className="text-[2.5rem] text-white uppercase font-[700] tracking-[-0.03em]">
-            Donate to&nbsp;
-            <br />
-            <span className="text-stc-200">Abuja Blazers</span>
-          </h1>
-        </div>
-        <p className="max-w-419 font-button text-grey-25">
-          Help us grow flag football in Nigeria. Every donation supports player <br></br>development, equipment, and
-          community programs.
-        </p>
-      </section>
+        <HeroSection
+            eyebrow="Support the Team"
+            mainText="Donate to"
+            subText="Abuja Blazers"
+            description="Help us grow flag football in Nigeria. Every donation supports player"
+            descriptionSubText="development, equipment, and community programs."
+        />
       <section className="min-h-dvh py-60 px-45">
         <div className="grid grid-cols-[1.5fr_588px] gap-20">
           <div className="flex flex-col gap-20">
