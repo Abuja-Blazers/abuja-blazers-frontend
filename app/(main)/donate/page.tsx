@@ -6,8 +6,8 @@ import { useState } from "react";
 
 import Facilties from "@/app/assets/vectors/facilities.svg";
 import Football from "@/app/assets/vectors/football.svg";
-import { SupportCard } from "@/components/SupportCard";
 import { HeroSection } from "@/components/HeroSection";
+import { SupportCard } from "@/components/SupportCard";
 
 export default function DonatePage() {
   const [customAmount, setCustomAmount] = useState("");
@@ -20,13 +20,13 @@ export default function DonatePage() {
   };
   return (
     <div className="bg-grey-800">
-        <HeroSection
-            eyebrow="Support the Team"
-            mainText="Donate to"
-            subText="Abuja Blazers"
-            description="Help us grow flag football in Nigeria. Every donation supports player"
-            descriptionSubText="development, equipment, and community programs."
-        />
+      <HeroSection
+        eyebrow="Support the Team"
+        mainText="Donate to"
+        subText="Abuja Blazers"
+        description="Help us grow flag football in Nigeria. Every donation supports player"
+        descriptionSubText="development, equipment, and community programs."
+      />
       <section className="min-h-dvh py-60 px-45">
         <div className="grid grid-cols-[1.5fr_588px] gap-20">
           <div className="flex flex-col gap-20">

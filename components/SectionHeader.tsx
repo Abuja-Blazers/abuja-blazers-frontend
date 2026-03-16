@@ -5,8 +5,8 @@ interface SectionHeaderProps {
   eyebrow: string;
   title: string;
   description?: string;
-  linkHref: string;
-  linkLabel: string;
+  linkHref?: string;
+  linkLabel?: string;
 }
 
 export default function SectionHeader({ eyebrow, title, description, linkHref, linkLabel }: SectionHeaderProps) {
@@ -21,10 +21,12 @@ export default function SectionHeader({ eyebrow, title, description, linkHref, l
           {description && <p className="font-label leading-14 tracking-normal text-grey-25">{description}</p>}
         </div>
       </div>
-      <Link href={linkHref} className="self-end btn text-stc-200 uppercase">
-        {linkLabel}
-        <ArrowRight className="size-18 text-inherit" />
-      </Link>
+      {linkHref && (
+        <Link href={linkHref} className="self-end btn text-stc-200 uppercase">
+          {linkLabel}
+          <ArrowRight className="size-18 text-inherit" />
+        </Link>
+      )}
     </div>
   );
 }
