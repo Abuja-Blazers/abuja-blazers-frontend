@@ -95,6 +95,9 @@
     --typo-button--letter-spacing: 0;
     --typo-button--font-family: var(--font-satoshi);
     --typo-button--font-weight: 500;
+
+    --animate-slide-in: slideIn 0.5s ease both;
+
 }
 
 
@@ -106,3 +109,4 @@
 --btn-variant-primary--disabled: var(--color-grey-75);
 --btn-variant-primary--text-disabled: var(--color-grey-250);
 }
+
