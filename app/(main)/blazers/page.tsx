@@ -11,6 +11,7 @@ import PhotoFour from "@/app/assets/images/meet-placeholder-04.jpg";
 import { HeroSection } from "@/components/HeroSection";
 import Initials from "@/components/Initials";
 import MemberCard from "@/components/MemberCard";
+import { Suspense } from "react";
 
 export default function BlazersSquadPage() {
   return (
@@ -49,7 +50,9 @@ export default function BlazersSquadPage() {
             View Profile
           </Link>
         </div>
-        <PlayerFilterTabs />
+        <Suspense fallback={null}>
+            <PlayerFilterTabs />
+        </Suspense>
       </section>
     </div>
   );
