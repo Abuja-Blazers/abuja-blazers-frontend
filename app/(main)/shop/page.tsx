@@ -3,17 +3,26 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 import Photo from "@/app/assets/images/jersey.webp";
 import { useCartStore } from "@/app/store/cartStore";
-import CollectionCard, { Collection } from "@/components/CollectionCard";
+import { Collection } from "@/components/CollectionCard";
 import FeaturedDrop from "@/components/FeaturedDrop";
 import { HeroSection } from "@/components/HeroSection";
 import TabList, { TabGroup } from "@/components/TabList";
 import { formatCurrency } from "@/utils/data";
 
+
 export default function STCPage() {
+    return (
+        <Suspense fallback={null}>
+            <STC />
+        </Suspense>
+    )
+}
+
+export function STC() {
   // Not sure how products data will show up here
   // Will there be tags?
   // Note: add tab type to query param

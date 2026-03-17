@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { CloseIcon } from "yet-another-react-lightbox";
 
 import { HeroSection } from "@/components/HeroSection";
@@ -20,7 +20,15 @@ const stats = [
   { title: "Completed Signings", value: 3, description: "This Season" },
 ];
 
-export default function PlayerMarket() {
+export default function PlayerMarketPage() {
+  return (
+    <Suspense fallback={null}>
+      <PlayerMarket />
+    </Suspense>
+  );
+}
+
+function PlayerMarket() {
   const [search, setSearch] = useState("");
   const searchParams = useSearchParams();
   const status = (searchParams.get("status") ?? "all") as PlayerStatus | "all";
