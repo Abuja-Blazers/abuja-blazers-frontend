@@ -28,7 +28,7 @@ export function Input({ label, name, placeholder, type = "text", value, onChange
         onChange={onChange}
         className={clsx(
           "w-full bg-[#181818] border font-button rounded px-16 py-10 text-grey-200 placeholder:text-grey-25 outline-none transition-colors duration-150",
-          error ? "border-red-500 focus:border-red-500" : "border-grey-300 focus:border-stc-900"
+          error ? "border-red-500 focus:border-red-500" : "border-grey-300 focus:border-stc-900",
         )}
       />
       {error && <p className="font-caption text-red-500">{error}</p>}

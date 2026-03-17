@@ -1,6 +1,7 @@
-'use client'
+"use client";
 
 import { useForm } from "@tanstack/react-form";
+
 import { Input } from "./Input";
 import { Textarea } from "./Textarea";
 
@@ -48,11 +49,7 @@ export function ContactForm() {
         name="email"
         validators={{
           onChange: ({ value }) =>
-            !value.trim()
-              ? "Email is required"
-              : !/\S+@\S+\.\S+/.test(value)
-                ? "Invalid email"
-                : undefined,
+            !value.trim() ? "Email is required" : !/\S+@\S+\.\S+/.test(value) ? "Invalid email" : undefined,
         }}
       >
         {(field) => (
@@ -99,7 +96,6 @@ export function ContactForm() {
         )}
       </form.Field>
 
-
       <form.Field
         name="message"
         validators={{
@@ -118,7 +114,10 @@ export function ContactForm() {
         )}
       </form.Field>
 
-      <button type="submit" className="btn rounded py-10 px-20 uppercase bg-stc-200 border-[.6px] border-stc-900 text-grey-400 font-button font-bold max-w-fit">
+      <button
+        type="submit"
+        className="btn rounded py-10 px-20 uppercase bg-stc-200 border-[.6px] border-stc-900 text-grey-400 font-button font-bold max-w-fit"
+      >
         Send Message
       </button>
     </form>

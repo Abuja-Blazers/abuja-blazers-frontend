@@ -3,20 +3,21 @@ import { ArrowRight, CircleArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import BlazersAd from "@/app/assets/images/abuja-blazers-top.webp";
 import ShoeAd from "@/app/assets/images/shoe-ad.webp";
 import WhatsappJoinImage from "@/app/assets/images/whatsapp.webp";
-import BlazersAd from "@/app/assets/images/abuja-blazers-top.webp";
+import BankAccountCard from "@/components/BankAccountCard";
 import CollectionCard from "@/components/CollectionCard";
+import CuratorLink from "@/components/CuratorLink";
 import Initials from "@/components/Initials";
 import PlayerCard from "@/components/PlayerCard";
 import SectionHeader from "@/components/SectionHeader";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/Table";
 import { dummyCollection, playerMarket, players } from "@/utils/data";
+
 import { curatorLinks } from "./curator/page";
-import CuratorLink from "@/components/CuratorLink";
 import { newsLinks } from "./news/page";
-import BankAccountCard from "@/components/BankAccountCard";
 
 export default function Home() {
   return (
@@ -169,12 +170,7 @@ export default function Home() {
         </div>
       </section>
       <section className="pb-50 px-16 lg:px-45 flex flex-col gap-73">
-        <SectionHeader
-          eyebrow="News & Media"
-          title="The Community"
-          linkHref="/news"
-          linkLabel="All Posts"
-        />
+        <SectionHeader eyebrow="News & Media" title="The Community" linkHref="/news" linkLabel="All Posts" />
         <div className="grid lg:grid-cols-3 gap-16">
           {newsLinks.map((piece, index) => (
             <CuratorLink key={index} content={piece} />
@@ -189,7 +185,7 @@ export default function Home() {
           height={0}
           sizes="100vw"
           className="w-full h-175 object-cover"
-      />
+        />
       </section>
       <section className="py-30 lg:py-60 px-16 lg:px-45 flex flex-col gap-30 lg:flex-row lg:gap-0 lg:justify-between">
         <SectionHeader

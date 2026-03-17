@@ -1,7 +1,7 @@
+import clsx from "clsx";
 import Image, { StaticImageData } from "next/image";
 
 import { formatCurrency } from "@/utils/data";
-import clsx from "clsx";
 
 export type Collection = {
   id?: string;
@@ -20,7 +20,12 @@ export default function CollectionCard({ collection }: { collection: Collection 
     <div className="w-full h-full flex flex-col justify-between border-2 border-grey-300 rounded-2xs hover:shadow-outer-card hover:border-stc-400 hover:scale-98 transition-all duration-300 cursor-pointer">
       <div className="relative bg-stc-300 py-20 px-20 w-full h-full rounded-tl-2xs rounded-tr-2xs">
         {tag && (
-          <p className={clsx("absolute bg-stc-200 py-8 px-18 max-w-fit rounded uppercase text-grey-800 font-button", tagPosition === "left" ? "left-20" : "right-20")}>
+          <p
+            className={clsx(
+              "absolute bg-stc-200 py-8 px-18 max-w-fit rounded uppercase text-grey-800 font-button",
+              tagPosition === "left" ? "left-20" : "right-20",
+            )}
+          >
             {tag}
           </p>
         )}

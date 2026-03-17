@@ -27,11 +27,16 @@ export default function TabList({ tabList }: { tabList: Record<string, TabGroup>
                   scroll={false}
                   className={clsx(
                     "font-button font-inter text-grey-100 py-16 flex justify-between items-center",
-                    activeTab === tab.href && "text-stc-200"
+                    activeTab === tab.href && "text-stc-200",
                   )}
                 >
                   {tab.label}
-                  <span className={clsx("px-4 rounded-full bg-[#181818] text-gray-25", activeTab === tab.href && "text-stc-200 bg-[#23130C]")}>
+                  <span
+                    className={clsx(
+                      "px-4 rounded-full bg-[#181818] text-gray-25",
+                      activeTab === tab.href && "text-stc-200 bg-[#23130C]",
+                    )}
+                  >
                     {group.total}
                   </span>
                 </Link>

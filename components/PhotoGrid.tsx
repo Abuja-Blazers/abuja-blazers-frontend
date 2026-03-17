@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
+
 import "yet-another-react-lightbox/styles.css";
 
 export const PhotoGrid = ({ images }: { images: StaticImageData[] }) => {
@@ -21,7 +22,12 @@ export const PhotoGrid = ({ images }: { images: StaticImageData[] }) => {
         }}
       >
         <div className="col-span-2 lg:col-span-3 aspect-16/7 relative">
-          <Image src={images[0]} alt="" fill className="object-cover rounded-2xs border-2 border-grey-300 cursor-pointer" />
+          <Image
+            src={images[0]}
+            alt=""
+            fill
+            className="object-cover rounded-2xs border-2 border-grey-300 cursor-pointer"
+          />
         </div>
 
         {images.slice(1).map((src, i) => (

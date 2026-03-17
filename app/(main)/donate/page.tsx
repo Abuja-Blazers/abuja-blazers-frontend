@@ -6,9 +6,9 @@ import { useState } from "react";
 
 import Facilties from "@/app/assets/vectors/facilities.svg";
 import Football from "@/app/assets/vectors/football.svg";
+import BankAccountCard from "@/components/BankAccountCard";
 import { HeroSection } from "@/components/HeroSection";
 import { SupportCard } from "@/components/SupportCard";
-import BankAccountCard from "@/components/BankAccountCard";
 
 export default function DonatePage() {
   const [customAmount, setCustomAmount] = useState("");

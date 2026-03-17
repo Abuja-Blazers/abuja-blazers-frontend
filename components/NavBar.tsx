@@ -1,13 +1,12 @@
-"use client"
+"use client";
 
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-
-import BlazersLogo from "@/app/assets/vectors/blazers-logo.svg";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 import { useEffect, useState } from "react";
 
+import BlazersLogo from "@/app/assets/vectors/blazers-logo.svg";
 
 const links = [
   { label: "The Squad", route: "/blazers" },
@@ -40,16 +39,14 @@ export const NavBar = () => {
                   href={route}
                   className={clsx(
                     "btn p-10 h-40 inline-flex font-button hover:text-stc-200 font-medium uppercase",
-                    pathname === route ? "text-stc-200" : "text-grey-250"
+                    pathname === route ? "text-stc-200" : "text-grey-250",
                   )}
                 >
                   {label}
                 </Link>
               ))}
             </div>
-            <button className="btn font-button p-10 btn-primary hover:btn-primary-hover uppercase">
-              Get Tickets
-            </button>
+            <button className="btn font-button p-10 btn-primary hover:btn-primary-hover uppercase">Get Tickets</button>
           </div>
 
           <button
@@ -57,9 +54,24 @@ export const NavBar = () => {
             onClick={() => setOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
-            <span className={clsx("block h-1.5 w-24 bg-[#F24822] transition-all duration-300 origin-center", open && "translate-y-6.5 rotate-45")} />
-            <span className={clsx("block h-1.5 w-24 bg-[#F24822] transition-all duration-300", open && "opacity-0 scale-x-0")} />
-            <span className={clsx("block h-1.5 w-24 bg-[#F24822] transition-all duration-300 origin-center", open && "-translate-y-6.5 -rotate-45")} />
+            <span
+              className={clsx(
+                "block h-1.5 w-24 bg-[#F24822] transition-all duration-300 origin-center",
+                open && "translate-y-6.5 rotate-45",
+              )}
+            />
+            <span
+              className={clsx(
+                "block h-1.5 w-24 bg-[#F24822] transition-all duration-300",
+                open && "opacity-0 scale-x-0",
+              )}
+            />
+            <span
+              className={clsx(
+                "block h-1.5 w-24 bg-[#F24822] transition-all duration-300 origin-center",
+                open && "-translate-y-6.5 -rotate-45",
+              )}
+            />
           </button>
         </div>
       </nav>
@@ -67,7 +79,7 @@ export const NavBar = () => {
       <div
         className={clsx(
           "md:hidden fixed inset-0 z-40 bg-grey-800 flex flex-col px-30 pt-100 pb-40 gap-8 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
+          open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none",
         )}
       >
         {links.map(({ label, route }, index) => (
@@ -77,7 +89,7 @@ export const NavBar = () => {
             className={clsx(
               "font-heading uppercase py-16 border-b border-grey-400 transition-all duration-300",
               pathname === route ? "text-stc-200" : "text-grey-250 hover:text-stc-200",
-              open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
             )}
             style={{ transitionDelay: open ? `${index * 50}ms` : "0ms" }}
           >
@@ -85,7 +97,8 @@ export const NavBar = () => {
           </Link>
         ))}
 
-        <button className="btn font-heading p-10 max-w-fit btn-primary hover:btn-primary-hover uppercase mt-20 w-full transition-all duration-300"
+        <button
+          className="btn font-heading p-10 max-w-fit btn-primary hover:btn-primary-hover uppercase mt-20 w-full transition-all duration-300"
           style={{ transitionDelay: open ? `${links.length * 50}ms` : "0ms" }}
         >
           Get Tickets
