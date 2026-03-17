@@ -31,7 +31,7 @@ export const NavBar = () => {
             <Image src={BlazersLogo} alt="Blazers Logo" width={68} className="object-cover h-auto" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-40 py-12">
+          <div className="hidden lg:flex items-center gap-40 py-12">
             <div className="flex items-center gap-20">
               {links.map(({ label, route }) => (
                 <Link
@@ -50,7 +50,7 @@ export const NavBar = () => {
           </div>
 
           <button
-            className="md:hidden flex flex-col justify-center items-center size-40 gap-5"
+            className="lg:hidden flex flex-col justify-center items-center size-40 gap-5"
             onClick={() => setOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
@@ -78,7 +78,7 @@ export const NavBar = () => {
 
       <div
         className={clsx(
-          "md:hidden fixed inset-0 z-40 bg-grey-800 flex flex-col px-30 pt-100 pb-40 gap-8 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "lg:hidden fixed inset-0 z-40 bg-grey-800 flex flex-col px-30 pt-100 pb-40 gap-8 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
           open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none",
         )}
       >
