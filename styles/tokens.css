@@ -40,6 +40,9 @@
 }
 
 @theme inline {
+    --font-satoshi: var(--font-satoshi);
+    --font-inter: var(--font-inter);
+
     --shadow-outer-card: 0px 6px 9.2px 0px #00000073;
     
     --typo-label: .875rem;
@@ -97,6 +100,7 @@
     --typo-button--font-weight: 500;
 
     --animate-slide-in: slideIn 0.5s ease both;
+    --animate-page-in: pageIn 3s cubic-bezier(0.16, 1, 0.3, 1) both;
 
 }
 

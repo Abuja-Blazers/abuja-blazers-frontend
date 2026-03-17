@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t border-t-grey-300 bg-grey-400">
-      <div className="px-45 py-60 flex flex-col gap-69">
-        <div className="grid grid-cols-2 justify-between items-center">
+      <div className="px-16 lg:px-45 py-30 lg:py-60 flex flex-col gap-69">
+        <div className="grid gap-30 lg:grid-cols-2 lg:gap-0 justify-between items-center">
           <div className="max-w-309 flex flex-col gap-16">
             <h1 className="font-lg text-white uppercase">Abuja Blazers</h1>
             <p className="font-label leading-19 tracking-normal text-grey-25">
@@ -23,14 +23,14 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-2 gap-y-30 lg:gap-y-0 lg:grid-cols-3">
             {footerNavigation.map((value, index) => (
               <div
                 key={index}
                 className={clsx(
                   "flex flex-col gap-32",
-                  index === 1 && "justify-self-center",
-                  index === 2 && "justify-self-end",
+                  index === 1 && "lg:justify-self-center",
+                  index === 2 && "lg:justify-self-end",
                 )}
               >
                 <p className="font-heading font-medium text-white uppercase">{value.title}</p>
@@ -49,10 +49,10 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="border-t border-t-grey-300 grid grid-cols-3 justify-between py-40">
+        <div className="border-t border-t-grey-300 grid gap-20 lg:gap-0 lg:grid-cols-3 justify-between py-40">
           <p className="text-grey-25 font-label tracking-normal">© 2026 Abuja Blazers. All rights reserved.</p>
-          <p className="text-center text-grey-25 font-label tracking-normal">Abuja, Nigeria</p>
-          <p className="text-right text-grey-25 font-label tracking-normal">Studio Fameely</p>
+          <p className="lg:text-center text-grey-25 font-label tracking-normal">Abuja, Nigeria</p>
+          <p className="lg:text-right text-grey-25 font-label tracking-normal">Studio Fameely</p>
         </div>
       </div>
     </footer>
@@ -81,7 +81,7 @@ const footerNavigation = [
     title: "More",
     links: [
       { label: "News & Media", link: "/news" },
-      { label: "Tickets", link: "/tickets" },
+      { label: "Tickets", link: "" },
       { label: "Donate", link: "/donate" },
       { label: "Contact Us", link: "/contact-us" },
     ],
@@ -89,10 +89,10 @@ const footerNavigation = [
   {
     title: "Club",
     links: [
-      { label: "About Blazers", link: "/about" },
-      { label: "Sponsorship", link: "/sponsorship" },
-      { label: "Privacy Policy", link: "/" },
-      { label: "Terms of Use", link: "/" },
+      { label: "About Blazers", link: "" },
+      { label: "Sponsorship", link: "" },
+      { label: "Privacy Policy", link: "" },
+      { label: "Terms of Use", link: "" },
     ],
   },
 ];

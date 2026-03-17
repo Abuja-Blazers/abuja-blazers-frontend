@@ -14,13 +14,13 @@ export const PhotoGrid = ({ images }: { images: StaticImageData[] }) => {
   return (
     <>
       <div
-        className="grid grid-cols-3 gap-x-16 gap-y-50"
+        className="grid grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-20 lg:gap-y-50"
         onClick={() => {
           setIndex(0);
           setOpen(true);
         }}
       >
-        <div className="col-span-3 aspect-16/7 relative">
+        <div className="col-span-2 lg:col-span-3 aspect-16/7 relative">
           <Image src={images[0]} alt="" fill className="object-cover rounded-2xs border-2 border-grey-300 cursor-pointer" />
         </div>
 

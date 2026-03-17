@@ -31,7 +31,7 @@ export default function MemberCard({ member }: { member: {
                     className="w-full h-340 object-cover rounded-tl-2xs rounded-t-2xs"
                 />
             </div>
-            <div className="px-29 flex flex-col divide-y divide-grey-300">
+            <div className="px-10 lg:px-29 flex flex-col divide-y divide-grey-300">
                 <div className="pt-26 pb-8 px-10 flex flex-col gap-4">
                     <p className="font-title-lg  tracking-normal font-medium text-grey-200">
                         {name}

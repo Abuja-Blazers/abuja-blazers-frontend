@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import ShoeAd from "@/app/assets/images/shoe-ad.webp";
 import WhatsappJoinImage from "@/app/assets/images/whatsapp.webp";
+import BlazersAd from "@/app/assets/images/abuja-blazers-top.webp";
 import CollectionCard from "@/components/CollectionCard";
 import Initials from "@/components/Initials";
 import PlayerCard from "@/components/PlayerCard";
@@ -12,6 +13,10 @@ import SectionHeader from "@/components/SectionHeader";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/Table";
 import { dummyCollection, playerMarket, players } from "@/utils/data";
+import { curatorLinks } from "./curator/page";
+import CuratorLink from "@/components/CuratorLink";
+import { newsLinks } from "./news/page";
+import BankAccountCard from "@/components/BankAccountCard";
 
 export default function Home() {
   return (
@@ -19,19 +24,21 @@ export default function Home() {
       <section className="relative min-h-dvh bg-[url('@/app/assets/images/home-background.webp')] bg-cover bg-center flex items-center justify-center">
         <div className="absolute inset-0 bg-black/80"></div>
 
-        <div className="relative max-w-4xl w-full">
+        <div className="relative max-w-4xl w-full px-16 lg:px-0">
           <div className="flex flex-col gap-30 items-center">
-            <div className="flex flex-col gap-10 items-center">
-              <h1 className="font-heading-lg uppercase text-white">
-                PLAY HARD.
-                <span className="text-stc-200">&nbsp;BLAZE&nbsp;</span>
-                up.
+            <div className="flex flex-col gap-10 items-start lg:items-center">
+              <h1 className="flex flex-col lg:flex-row text-[3.25rem] leading-normal font-heading-lg uppercase text-white">
+                <span className="whitespace-nowrap">PLAY HARD.&nbsp;</span>
+                <span className="whitespace-nowrap">
+                  <span className="text-stc-200">BLAZE&nbsp;</span>
+                  UP.
+                </span>
               </h1>
-              <p className="text-grey-200 font-heading leading-24  max-w-554 text-center">
+              <p className="text-grey-200 font-heading leading-24  max-w-554 lg:text-center">
                 Flag football, community, culture. The Blazers are redefining the game in Abuja, on and off the field.
               </p>
             </div>
-            <div className="flex items-center gap-19">
+            <div className="flex w-full lg:w-fit items-center gap-19">
               <Link href="/shop" className="btn btn-primary uppercase px-18 py-20" title="Navigate to shop">
                 Shop the collection
               </Link>
@@ -44,7 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-dvh py-30 px-45 flex flex-col gap-92">
+      <section className="min-h-dvh px-16 lg:px-45 py-30 lg:py-30 flex flex-col gap-92">
         <Link href="" className="mx-auto grid place-content-center">
           <Image
             src={WhatsappJoinImage}
@@ -61,7 +68,7 @@ export default function Home() {
             linkLabel="View All Products"
           />
 
-          <div className="grid grid-cols-3 gap-20 items-stretch">
+          <div className="grid lg:grid-cols-3 gap-20 items-stretch">
             {dummyCollection.map((value, index) => (
               <div key={index} className={clsx("w-full", index === 0 && "col-span-1")}>
                 <CollectionCard collection={value} />
@@ -71,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-50 px-45 flex flex-col gap-60">
+      <section className="py-50 px-16 lg:px-45 lg:py-50 flex flex-col gap-60">
         <SectionHeader
           eyebrow="The Squad"
           title="Meet the blazers"
@@ -79,14 +86,14 @@ export default function Home() {
           linkLabel="Full Roster"
           description="Athletes. Leaders. Game changers. Get to know the team driving the Blazers to glory."
         />
-        <div className="grid grid-cols-3 gap-y-30 gap-x-20">
+        <div className="grid gap-y-10 lg:grid-cols-3 lg:gap-y-30 lg:gap-x-20">
           {players.map((player, index) => (
             <PlayerCard key={index} {...player} />
           ))}
         </div>
       </section>
 
-      <section className="min-h-dvh pt-60 px-45 flex flex-col gap-70">
+      <section className="lg:min-h-dvh pt-30 px-16 lg:pt-60 lg:px-45  flex flex-col lg:gap-70">
         <SectionHeader
           eyebrow="Transfer Market"
           title="Player Market"
@@ -137,7 +144,7 @@ export default function Home() {
         </Table>
       </section>
 
-      <section className="min-h-dvh px-45 flex flex-col gap-92">
+      <section className="min-h-dvh px-16 lg:px-45 flex flex-col gap-92">
         <Link href="" className="mx-auto grid place-content-center">
           <Image
             src={ShoeAd}
@@ -146,7 +153,51 @@ export default function Home() {
             width={680}
           />
         </Link>
-        <div className="pb-50 px-45"></div>
+        <div className="pb-50 flex flex-col gap-73">
+          <SectionHeader
+            eyebrow="Soul's Corner"
+            title="By Soul Express"
+            description="Stories, culture, and takes straight from the Soul Express founder."
+            linkHref="/curator"
+            linkLabel="All Content"
+          />
+          <div className="grid lg:grid-cols-3 gap-16">
+            {curatorLinks.map((content, index) => (
+              <CuratorLink key={index} content={content} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="pb-50 px-16 lg:px-45 flex flex-col gap-73">
+        <SectionHeader
+          eyebrow="News & Media"
+          title="The Community"
+          linkHref="/news"
+          linkLabel="All Posts"
+        />
+        <div className="grid lg:grid-cols-3 gap-16">
+          {newsLinks.map((piece, index) => (
+            <CuratorLink key={index} content={piece} />
+          ))}
+        </div>
+      </section>
+      <section className="hidden lg:block">
+        <Image
+          src={BlazersAd}
+          alt="Blazers Ad"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-full h-175 object-cover"
+      />
+      </section>
+      <section className="py-30 lg:py-60 px-16 lg:px-45 flex flex-col gap-30 lg:flex-row lg:gap-0 lg:justify-between">
+        <SectionHeader
+          eyebrow="Support the Team"
+          title="Donate to Abuja Blazers"
+          description="Help us grow flag football in Nigeria. Every donation supports player development, equipment, and community programs."
+        />
+        <BankAccountCard />
       </section>
     </div>
   );

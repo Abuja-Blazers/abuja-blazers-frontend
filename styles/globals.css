@@ -7,5 +7,6 @@
     scroll-behavior: smooth;
     font-size: 90%;
     line-height: normal;
+    background-color: var(--color-grey-800);
   }
 }

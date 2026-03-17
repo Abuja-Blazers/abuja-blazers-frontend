@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ eyebrow, mainText, subText, description, descriptionSubText }: HeroSectionProps) => {
   return (
-    <section className="px-45 py-57 flex flex-col gap-8 items-start justify-center border-y border-y-grey-300 bg-[linear-gradient(0deg,rgba(17,17,17,0.2),rgba(17,17,17,0.2)),linear-gradient(267.06deg,rgba(255,92,0,0.21)_23.55%,rgba(17,17,17,0.3)_64.33%)] backdrop-blur-[100px]">
+    <section className="px-16 lg:px-45 py-57 flex flex-col gap-8 items-start justify-center border-y border-y-grey-300 bg-[linear-gradient(0deg,rgba(17,17,17,0.2),rgba(17,17,17,0.2)),linear-gradient(267.06deg,rgba(255,92,0,0.21)_23.55%,rgba(17,17,17,0.3)_64.33%)] backdrop-blur-[100px]">
       <p className="font-button leading-none uppercase text-stc-200">{eyebrow}</p>
       <div className="max-w-309">
         <h1 className="text-[2.5rem] text-white uppercase font-[700] tracking-[-0.03em]">

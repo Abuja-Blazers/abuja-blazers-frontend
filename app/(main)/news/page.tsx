@@ -3,7 +3,6 @@ import PhotoFive from "@/app/assets/images/photo-five.webp";
 import PhotoFour from "@/app/assets/images/photo-four.webp";
 import PhotoOne from "@/app/assets/images/photo-one.webp";
 import PhotoThree from "@/app/assets/images/photo-three.webp";
-import PhotoTwo from "@/app/assets/images/photo-two.webp";
 import CuratorLink from "@/components/CuratorLink";
 import { HeroSection } from "@/components/HeroSection";
 import { PhotoGrid } from "@/components/PhotoGrid";
@@ -19,14 +18,14 @@ export default function NewsPage() {
         description="Match reports, announcements, photo galleries and"
         descriptionSubText=" everything happening around Abuja Blazers."
       />
-      <section className="bg-grey-800 py-60 px-44">
-        <div className="grid grid-cols-3 gap-16">
+      <section className="bg-grey-800 px-16 lg:px-45 py-30 lg:py-60">
+        <div className="grid lg:grid-cols-3 gap-16">
           {newsLinks.map((piece, index) => (
             <CuratorLink key={index} content={piece} />
           ))}
         </div>
       </section>
-      <section className="bg-grey-800 px-44 pb-53 flex flex-col gap-21">
+      <section className="bg-grey-800 px-16 lg:px-45 pb-53 flex flex-col gap-21">
         <SectionHeader eyebrow="Media" title="Photo Gallery" />
         <PhotoGrid
           images={[
@@ -47,7 +46,7 @@ export default function NewsPage() {
   );
 }
 
-const newsLinks = [
+export const newsLinks = [
   {
     link: "",
     type: "Match Report",

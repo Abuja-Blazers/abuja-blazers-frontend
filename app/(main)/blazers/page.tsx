@@ -21,8 +21,8 @@ export default function BlazersSquadPage() {
                 description="Meet the athletes powering Abuja Blazers. 22"
                 descriptionSubText="players. One goal. Dominate."
             />
-            <section className="py-50 px-44 flex flex-col gap-20">
-                <div className="w-full py-43 px-80 grid grid-cols-[1fr_1.5fr_1fr] items-center border-2 rounded-2xs bg-grey-400 border-stc-400 bg-[linear-gradient(0deg,#111111,#111111),linear-gradient(267.06deg,rgba(255,92,0,0.021)_44.6%,rgba(17,17,17,0.03)_64.33%)] backdrop-blur-[100px]">
+            <section className="px-16 lg:px-45 py-30 lg:y-50 flex flex-col gap-30 lg:gap-73">
+                <div className="w-full py-20 lg:py-43 px-20 lg:px-80 grid gap-15 lg:gap-0 lg:grid-cols-[1fr_1.5fr_1fr] items-center border-2 rounded-2xs bg-grey-400 border-stc-400 bg-[linear-gradient(0deg,#111111,#111111),linear-gradient(267.06deg,rgba(255,92,0,0.021)_44.6%,rgba(17,17,17,0.03)_64.33%)] backdrop-blur-[100px]">
                     <div className="flex gap-20 items-center">
                         <Initials name="G Sent" className="size-[calc(64px*0.8)]" />
                         <div className="flex flex-col">
@@ -82,7 +82,7 @@ const PlayerFilterTabs = () => {
                     </Link>
                 ))}
             </div>
-            <div key={activeTab} className="grid grid-cols-4 gap-x-20 gap-y-50 animate-slide-in">
+            <div key={activeTab} className="grid lg:grid-cols-4 gap-x-20 gap-y-50 animate-slide-in">
                 {filtered.map((m, index) => (
                     <MemberCard key={index} member={m.member} />
                 ))}

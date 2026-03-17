@@ -14,8 +14,8 @@ export default function CuratorPage() {
         description="Stories, culture, and unfiltered takes on flag"
         descriptionSubText="football, Abuja, and everything in between."
       />
-      <section className="py-50 px-44 flex flex-col gap-73">
-        <div className="w-full py-43 px-80 grid grid-cols-[1fr_1.5fr_1fr] items-center border-2 rounded-2xs bg-grey-400 border-stc-400 bg-[linear-gradient(0deg,#111111,#111111),linear-gradient(267.06deg,rgba(255,92,0,0.021)_44.6%,rgba(17,17,17,0.03)_64.33%)] backdrop-blur-[100px]">
+      <section className="px-16 lg:px-45 py-30 lg:y-50 flex flex-col gap-40 lg:gap-73">
+        <div className="w-full py-20 lg:py-43 px-20 lg:px-80 grid gap-15 lg:gap-0 lg:grid-cols-[1fr_1.5fr_1fr] items-center border-2 rounded-2xs bg-grey-400 border-stc-400 bg-[linear-gradient(0deg,#111111,#111111),linear-gradient(267.06deg,rgba(255,92,0,0.021)_44.6%,rgba(17,17,17,0.03)_64.33%)] backdrop-blur-[100px]">
           <div className="flex gap-20 items-center">
             <Initials name="Soul Express" className="size-[calc(64px*0.8)]" />
             <div className="flex flex-col">
@@ -36,7 +36,7 @@ export default function CuratorPage() {
             Follow Soul
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid lg:grid-cols-3 gap-16">
           {curatorLinks.map((content, index) => (
             <CuratorLink key={index} content={content} />
           ))}
@@ -46,7 +46,7 @@ export default function CuratorPage() {
   );
 }
 
-const curatorLinks = [
+export const curatorLinks = [
   {
     link: "",
     type: "Feature",

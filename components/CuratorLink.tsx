@@ -27,7 +27,7 @@ export default function CuratorLink({ content }: { content: Content }) {
             width={0}
             height={0}
             sizes="100vw"
-            className="w-auto h-auto object-cover"
+            className="w-auto min-h-330 object-cover"
           />
         </div>
       </div>

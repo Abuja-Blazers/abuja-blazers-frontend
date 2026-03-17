@@ -7,12 +7,24 @@ export const formatCurrency = (amount: number, currency = "NGN") =>
     currency,
   }).format(amount);
 
+export function formatCompact(value: number, currency = "₦") {
+  const formatted = Intl.NumberFormat("en", { notation: "compact" }).format(value);
+  return `${currency}${formatted}`;
+}
+
 export function formatInitials(name: string): string {
   return name
     .trim()
     .split(/\s+/)
     .map((word) => word[0].toUpperCase())
     .join("");
+}
+
+export type PlayerStatus = "available" | "negotiating" | "unavailable" | "signed";
+
+export function filterByStatus(players: typeof playerMarket, status: PlayerStatus | "all") {
+  if (status === "all") return players;
+  return players.filter((p) => p.status === status);
 }
 
 export const dummyCollection = [

@@ -8,6 +8,7 @@ import Facilties from "@/app/assets/vectors/facilities.svg";
 import Football from "@/app/assets/vectors/football.svg";
 import { HeroSection } from "@/components/HeroSection";
 import { SupportCard } from "@/components/SupportCard";
+import BankAccountCard from "@/components/BankAccountCard";
 
 export default function DonatePage() {
   const [customAmount, setCustomAmount] = useState("");
@@ -27,11 +28,11 @@ export default function DonatePage() {
         description="Help us grow flag football in Nigeria. Every donation supports player"
         descriptionSubText="development, equipment, and community programs."
       />
-      <section className="min-h-dvh py-60 px-45">
-        <div className="grid grid-cols-[1.5fr_588px] gap-20">
+      <section className="min-h-dvh py-30 lg:py-60 px-16 lg:px-45">
+        <div className="grid lg:grid-cols-[1.5fr_588px] gap-20">
           <div className="flex flex-col gap-20">
             <p className="font-button text-stc-200 font-medium uppercase">Support the team</p>
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid gap-20 lg:grid-cols-3 lg:gap-10">
               {supportInfo.map((info, index) => (
                 <SupportCard key={index} {...info} />
               ))}
@@ -71,7 +72,7 @@ export default function DonatePage() {
 
               <button
                 type="submit"
-                className="btn btn-primary bg-stc-200 py-10 rounded-[5px] text-grey-400 hover:text-grey-400/90 uppercase font-title font-satoshi text-2xl"
+                className="btn btn-primary bg-stc-200 py-10 rounded-[5px] text-grey-400 hover:text-grey-400/90 uppercase font-title font-satoshi text-xl lg:text-2xl"
               >
                 Complete donation
               </button>
@@ -79,23 +80,7 @@ export default function DonatePage() {
           </div>
 
           <div className="flex flex-col gap-20">
-            <div className="rounded-2xs border-[0.5px] border-stc-200 bg-grey-500">
-              <div className="py-29 px-34 flex flex-col gap-10 divide-y divide-grey-300 [&>*:first-child]:border-t-0">
-                <h1 className="py-21 font-title font-satoshi uppercase text-grey-200">Bank account details</h1>
-                <div className="py-19.5 flex justify-between items-center">
-                  <p className="font-label tracking-normal uppercase text-grey-25">Bank Name</p>
-                  <h4 className="text-grey-200 font-title uppercase">OPAY</h4>
-                </div>
-                <div className="py-19.5 flex justify-between items-center">
-                  <p className="font-label tracking-normal uppercase text-grey-25">Account name</p>
-                  <h4 className="text-grey-200 font-title">Abuja Blazers Football Ventures</h4>
-                </div>
-                <div className="py-19.5 flex justify-between items-center">
-                  <p className="font-label tracking-normal uppercase text-grey-25">Account Number</p>
-                  <h4 className="text-grey-200 font-title uppercase">6539241608</h4>
-                </div>
-              </div>
-            </div>
+            <BankAccountCard />
 
             <InfoCard
               title=" Important Note"
@@ -195,7 +180,7 @@ const DonationTransferType = ({ value, title }: { value: string; title: string }
 
 const InfoCard = ({ title, description }: { title: string; description: React.ReactNode }) => {
   return (
-    <div className="py-29 px-34 rounded-2xs flex flex-col gap-10 border border-grey-300 bg-grey-400">
+    <div className="py-29 px-16 lg:px-34 rounded-2xs flex flex-col gap-10 border border-grey-300 bg-grey-400">
       <p className="py-10 font-title font-satoshi text-stc-200 uppercase tracking-normal leading-none">{title}</p>
       <p className="font-label text-grey-25 font-satoshi">{description}</p>
     </div>
