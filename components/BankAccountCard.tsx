@@ -1,6 +1,6 @@
 export default function BankAccountCard() {
   return (
-    <div className="rounded-2xs border-[0.5px] border-stc-200 bg-grey-500">
+    <div className="rounded-2xs border-[0.5px] border-stc-200 bg-grey-500 lg:min-w-588">
       <div className="py-13 px-10 lg:py-29 ;g:px-34 flex flex-col gap-10 divide-y divide-grey-300 [&>*:first-child]:border-t-0">
         <h1 className="py-21 font-title font-satoshi uppercase text-grey-200">Bank account details</h1>
         <div className="py-19.5 flex justify-between items-center">
