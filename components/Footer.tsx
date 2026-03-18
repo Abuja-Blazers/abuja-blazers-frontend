@@ -49,10 +49,10 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="border-t border-t-grey-300 grid gap-20 lg:gap-0 lg:grid-cols-3 justify-between py-40">
+        <div className="border-t border-t-grey-300 grid lg:gap-0 lg:grid-cols-3 justify-between py-40">
           <p className="text-grey-25 font-label tracking-normal">© 2026 Abuja Blazers. All rights reserved.</p>
-          <p className="lg:text-center text-grey-25 font-label tracking-normal">Abuja, Nigeria</p>
-          <p className="lg:text-right text-grey-25 font-label tracking-normal">Studio Fameely</p>
+          <p className="lg:text-center text-grey-25 font-label tracking-normal mt-20 lg:mt-0">Abuja, Nigeria</p>
+          <p className="lg:text-right text-grey-25 font-label tracking-normal mt-10 lg:mt-0">Studio Fameely</p>
         </div>
       </div>
     </footer>

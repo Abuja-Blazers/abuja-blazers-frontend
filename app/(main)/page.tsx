@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="lg:min-h-dvh pt-30 px-16 lg:pt-60 lg:px-45  flex flex-col lg:gap-70">
+      <section className="lg:min-h-dvh pt-30 px-16 lg:pt-60 lg:px-45 flex flex-col gap-20 lg:gap-70">
         <SectionHeader
           eyebrow="Transfer Market"
           title="Player Market"
@@ -114,10 +114,10 @@ export default function Home() {
           <TableBody>
             {playerMarket.map((player, index) => (
               <TableRow key={index}>
-                <TableCell className="flex gap-10 items-center">
-                  <Initials name={player.metadata.name} className="size-34" />
+                <TableCell className="flex gap-10 items-center min-w-300">
+                  <Initials name={player.metadata.name} className="size-54 flex items-center justify-center" />
                   <span className="flex flex-col gap-5">
-                    <span className="font-title-lg font-bold tracking-normal text-grey-200 capitalize">
+                    <span className="font-heading lg:font-title-lg font-bold! tracking-normal text-grey-200 capitalize">
                       {player.metadata.name}
                     </span>
                     <span className="font-label tracking-normal leading-none uppercase text-grey-25">
@@ -134,7 +134,7 @@ export default function Home() {
                 <TableCell>
                   <Link
                     href={`/player-market/${player.id}`}
-                    className="btn p-10 inline-flex font-button text-stc-200 font-medium uppercase rounded-[3px] border border-stc-200 min-w-77"
+                    className="pointer-events-none btn p-10 inline-flex font-button text-stc-200 font-medium uppercase rounded-[3px] border border-stc-200 min-w-77"
                   >
                     View
                   </Link>
@@ -145,16 +145,16 @@ export default function Home() {
         </Table>
       </section>
 
-      <section className="min-h-dvh px-16 lg:px-45 flex flex-col gap-92">
+      <section className="min-h-dvh py-20 lg:py-0 px-16 lg:px-45 flex flex-col gap-20 lg:gap-92">
         <Link href="" className="mx-auto grid place-content-center">
           <Image
             src={ShoeAd}
-            className="h-auto object-cover hover:scale-98 active:scale-98 duration-300 ease-in-out"
+            className="h-auto w-233 lg:w-680 object-cover hover:scale-98 active:scale-98 duration-300 ease-in-out"
             alt=""
-            width={680}
+            width={0}
           />
         </Link>
-        <div className="pb-50 flex flex-col gap-73">
+        <div className="lg:pb-50 flex flex-col gap-73">
           <SectionHeader
             eyebrow="Soul's Corner"
             title="By Soul Express"
