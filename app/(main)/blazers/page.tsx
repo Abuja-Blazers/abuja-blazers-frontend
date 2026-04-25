@@ -4,10 +4,19 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-import PhotoOne from "@/app/assets/images/meet-placeholder-01.jpg";
-import PhotoTwo from "@/app/assets/images/meet-placeholder-02.jpg";
-import PhotoThree from "@/app/assets/images/meet-placeholder-03.jpg";
-import PhotoFour from "@/app/assets/images/meet-placeholder-04.jpg";
+import PhotoOne from "@/app/assets/images/2do.webp"
+import Bari from "@/app/assets/images/bari.webp"
+import Edmonson from "@/app/assets/images/edmonson.webp"
+import Gorilla from "@/app/assets/images/gorilla.webp"
+import Jennifer from "@/app/assets/images/jennifer.webp"
+import KT from "@/app/assets/images/kayt.webp"
+import Mizu from "@/app/assets/images/mizu.webp"
+import Ogbuo from "@/app/assets/images/ogbuo.webp"
+import Prof from "@/app/assets/images/prof.webp"
+import Socrates from "@/app/assets/images/socrates.webp"
+import Soul from "@/app/assets/images/soul.webp"
+import Vava from "@/app/assets/images/vava.webp"
+import Zedd from "@/app/assets/images/zedd.webp"
 import { HeroSection } from "@/components/HeroSection";
 import Initials from "@/components/Initials";
 import MemberCard from "@/components/MemberCard";
@@ -30,7 +39,7 @@ export default function BlazersSquadPage() {
             <div className="flex flex-col">
               <p className="font-label tracking-[.05em] uppercase text-stc-200 text-[.625rem]">Team Captain</p>
               <p className="font-title text-grey-200 text-2xl uppercase">G Sent</p>
-              <p className="font-label-xs  text-grey-25">Quarterback · #1</p>
+              <p className="font-label-xs  text-grey-25">Quarterback · #12</p>
             </div>
           </div>
           <div className="justify-self-center">
@@ -128,116 +137,342 @@ const PlayerStats = ({ stats }: { stats: { games: number; tds: number; accuracy:
   );
 };
 
+
+
 const members = [
   {
     member: {
-      name: "Judy",
-      image: PhotoOne,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      name: "Koumei",
+      jerseyName: "KT",
+      jerseyNum: 21,
+      image: KT,
+      value: 21,
+      position: "Quarterback",
+      secondaryPosition: "Right Corner",
     },
-    tag: ["All", "Offensive"],
+    tag: ["All", "Offensive", "Defensive"],
   },
   {
     member: {
-      name: "Ali J",
-      image: PhotoTwo,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      name: "Abimbola Odunmbaku",
+      jerseyName: "Bimbo",
+      jerseyNum: 66,
+      image: null,
+      value: 66,
+      position: "Right Corner",
+      secondaryPosition: "WR (X)",
     },
-    tag: ["All", "Defensive"],
+    tag: ["All", "Defensive", "Offensive"],
   },
   {
     member: {
       name: "Valerie",
-      image: PhotoThree,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
-    },
-    tag: ["All", "Offensive"],
-  },
-  {
-    member: {
-      name: "Olaolu",
-      image: PhotoFour,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      jerseyName: "Valedictorian",
+      jerseyNum: 1,
+      image: Vava,
+      value: 1,
+      position: "Left Corner",
+      secondaryPosition: "Center",
     },
     tag: ["All", "Defensive"],
   },
   {
     member: {
-      name: "Ore",
+      name: "Barry G",
+      jerseyName: "BARí",
+      jerseyNum: 30,
+      image: Bari,
+      value: 30,
+      position: "Left Corner",
+      secondaryPosition: "Right Corner",
+    },
+    tag: ["All", "Defensive"],
+  },
+  {
+    member: {
+      name: "Oore-ofe",
+      jerseyName: "OA PROF",
+      jerseyNum: 6,
+      image: Prof,
+      value: 6,
+      position: "Center",
+      secondaryPosition: "Left Corner",
+    },
+    tag: ["All", "Offensive", "Defensive"],
+  },
+  {
+    member: {
+      name: "Mansur A",
+      jerseyName: "AMAZ",
+      jerseyNum: 10,
+      image: null,
+      value: 10,
+      position: "WR (A or Y)",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Defensive"],
+  },
+  {
+    member: {
+      name: "David",
+      jerseyName: "2do",
+      jerseyNum: 9,
       image: PhotoOne,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      value: 9,
+      position: "WR (Z)",
+      secondaryPosition: null,
     },
     tag: ["All", "Offensive"],
   },
   {
     member: {
-      name: "Mansur",
-      image: PhotoTwo,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      name: "Godsent N",
+      jerseyName: "Gsent",
+      jerseyNum: 12,
+      image: null,
+      value: 12,
+      position: "QB",
+      secondaryPosition: "WR",
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Olaoluwanis",
+      jerseyName: "SOCRATES",
+      jerseyNum: 44,
+      image: Socrates,
+      value: 44,
+      position: "WR (Z)",
+      secondaryPosition: "Right Safety",
+    },
+    tag: ["All", "Offensive", "Defensive"],
+  },
+  {
+    member: {
+      name: "Shepuya",
+      jerseyName: "MIZU (SAMURAI)",
+      jerseyNum: 11,
+      image: Mizu,
+      value: 11,
+      position: "WR (H)",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Ali",
+      jerseyName: "Ali Jr",
+      jerseyNum: 23,
+      image: null,
+      value: 23,
+      position: "WR (A)",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Toluwalashe",
+      jerseyName: "AIRAZAQ",
+      jerseyNum: 18,
+      image: null,
+      value: 18,
+      position: "WR (H)",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Nnamdi",
+      jerseyName: "Nnamdi",
+      jerseyNum: 17,
+      image: null,
+      value: 17,
+      position: "Rusher",
+      secondaryPosition: null,
     },
     tag: ["All", "Defensive"],
   },
   {
     member: {
-      name: "Mizu",
-      image: PhotoThree,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      name: "Amarachi Obi",
+      jerseyName: "Amie",
+      jerseyNum: 8,
+      image: null,
+      value: 8,
+      position: "Center",
+      secondaryPosition: null,
     },
     tag: ["All", "Offensive"],
   },
   {
     member: {
-      name: "Valerie",
-      image: PhotoFour,
-      value: 15,
-      position: "Wide Receiver",
-      stats: {
-        games: 6,
-        tds: 12,
-        yards: 343,
-      },
+      name: "Judy Ogbuo",
+      jerseyName: "Judy",
+      jerseyNum: 27,
+      image: Ogbuo,
+      value: 27,
+      position: "Safety",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive", "Defensive"],
+  },
+  {
+    member: {
+      name: "Shedrach E",
+      jerseyName: "ShadraQ",
+      jerseyNum: 3,
+      image: null,
+      value: 3,
+      position: "WR (Y)",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Edmonson",
+      jerseyName: "Edmonson",
+      jerseyNum: 88,
+      image: Edmonson,
+      value: 88,
+      position: "WR (Y)",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Temitope Fayanjuola",
+      jerseyName: "T. Forge",
+      jerseyNum: 7,
+      image: null,
+      value: 7,
+      position: "Rusher",
+      secondaryPosition: null,
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Soul",
+      jerseyName: "Soul",
+      jerseyNum: 19,
+      image: Soul,
+      value: 19,
+      position: "WR (H)",
+      secondaryPosition: "MLB",
+    },
+    tag: ["All", "Offensive", "Defensive"],
+  },
+  {
+    member: {
+      name: "Alex Gideon",
+      jerseyName: "Bhig ALEX",
+      jerseyNum: 111,
+      image: null,
+      value: 111,
+      position: "QB",
+      secondaryPosition: "Right Safety",
+    },
+    tag: ["All", "Offensive", "Defensive"],
+  },
+  {
+    member: {
+      name: "James B",
+      jerseyName: "James B",
+      jerseyNum: 4,
+      image: null,
+      value: 4,
+      position: "WR (Z)",
+      secondaryPosition: "Rusher",
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Usang Asim",
+      jerseyName: "Lord Flacko",
+      jerseyNum: 96,
+      image: null,
+      value: 96,
+      position: "Rusher",
+      secondaryPosition: "Rusher",
+    },
+    tag: ["All", "Defensive"],
+  },
+  {
+    member: {
+      name: "Melchizedek Odeh",
+      jerseyName: "Zedd",
+      jerseyNum: 5,
+      image: Zedd,
+      value: 5,
+      position: "Right Corner",
+      secondaryPosition: "Left Corner",
+    },
+    tag: ["All", "Defensive"],
+  },
+  {
+    member: {
+      name: "Jennifer Okhiria",
+      jerseyName: "JENNIFER",
+      jerseyNum: 8,
+      image: Jennifer,
+      value: 8,
+      position: "Center",
+      secondaryPosition: "R/L Corner",
+    },
+    tag: ["All", "Defensive"],
+  },
+  {
+    member: {
+      name: "Abdul Hafiz",
+      jerseyName: "Gorilla",
+      jerseyNum: 14,
+      image: Gorilla,
+      value: 14,
+      position: "WR (A)",
+      secondaryPosition: "Safety",
+    },
+    tag: ["All", "Offensive", "Defensive"],
+  },
+  {
+    member: {
+      name: "Achema Okpanachi",
+      jerseyName: "SILVERBACK ARCHI",
+      jerseyNum: 33,
+      image: null,
+      value: 33,
+      position: "WR (H)",
+      secondaryPosition: "WR (C)",
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Reni Olorunda",
+      jerseyName: "Renz",
+      jerseyNum: 9,
+      image: null,
+      value: 9,
+      position: "WR (H)",
+      secondaryPosition: "WR (C)",
+    },
+    tag: ["All", "Offensive"],
+  },
+  {
+    member: {
+      name: "Jasim Usman",
+      jerseyName: "Jasim",
+      jerseyNum: 2,
+      image: null,
+      value: 2,
+      position: "WR (H)",
+      secondaryPosition: null,
     },
     tag: ["All", "Offensive"],
   },
