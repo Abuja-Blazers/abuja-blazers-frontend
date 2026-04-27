@@ -23,6 +23,13 @@ export const NavBar = () => {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  const isActive = (route: string) => {
+    if (route.startsWith('http')) {
+      return typeof window !== 'undefined' && window.location.href.startsWith(route)
+    }
+    return pathname === route
+  }
+
   return (
     <>
       <nav className="bg-grey-800 relative z-50">
@@ -39,7 +46,7 @@ export const NavBar = () => {
                   href={route}
                   className={clsx(
                     "btn p-10 h-40 inline-flex font-button hover:text-stc-200 font-medium uppercase",
-                    pathname === route ? "text-stc-200" : "text-grey-250",
+                    isActive(route) ? "text-stc-200" : "text-grey-250",
                   )}
                 >
                   {label}
