@@ -43,7 +43,7 @@ export default function Home() {
               <Link href="https://shop.abujablazers.com" className="btn btn-primary uppercase px-18 py-20" title="Navigate to shop">
                 Shop the collection
               </Link>
-              <Link href="/blazers" className="btn font-button gap-10" title="Navigate to Squad Information">
+              <Link href="https://abujablazers.com/blazers" className="btn font-button gap-10" title="Navigate to Squad Information">
                 <CircleArrowRight className="size-16 bg-black" />
                 <span className="text-grey-200">Meet the Squad</span>
               </Link>
@@ -83,7 +83,7 @@ export default function Home() {
         <SectionHeader
           eyebrow="The Squad"
           title="Meet the blazers"
-          linkHref="/blazers"
+          linkHref="https://abujablazers.com/blazers"
           linkLabel="Full Roster"
           description="Athletes. Leaders. Game changers. Get to know the team driving the Blazers to glory."
         />
@@ -159,7 +159,7 @@ export default function Home() {
             eyebrow="Soul's Corner"
             title="By Soul Express"
             description="Stories, culture, and takes straight from the Soul Express founder."
-            linkHref="/curator"
+            linkHref="https://abujablazers.com/curator"
             linkLabel="All Content"
           />
           <div className="grid lg:grid-cols-3 gap-16">
@@ -170,7 +170,7 @@ export default function Home() {
         </div>
       </section>
       <section className="pb-50 px-16 lg:px-45 flex flex-col gap-73">
-        <SectionHeader eyebrow="News & Media" title="The Community" linkHref="/news" linkLabel="All Posts" />
+        <SectionHeader eyebrow="News & Media" title="The Community" linkHref="https://abujablazers.com/news" linkLabel="All Posts" />
         <div className="grid lg:grid-cols-3 gap-16">
           {newsLinks.map((piece, index) => (
             <CuratorLink key={index} content={piece} />

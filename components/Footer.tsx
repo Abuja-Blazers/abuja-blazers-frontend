@@ -71,19 +71,19 @@ const footerNavigation = [
   {
     title: "Explore",
     links: [
-      { label: "The Squad", link: "/blazers" },
+      { label: "The Squad", link: "https://abujablazers.com/blazers" },
       { label: "Merch Store", link: "https://shop.abujablazers.com" },
       { label: "Player Market", link: "https://players.abujablazers.com" },
-      { label: "Soul's Corner", link: "/curator" },
+      { label: "Soul's Corner", link: "https://abujablazers.com/curator" },
     ],
   },
   {
     title: "More",
     links: [
-      { label: "News & Media", link: "/news" },
+      { label: "News & Media", link: "https://abujablazers.com/news" },
       { label: "Tickets", link: "" },
-      { label: "Donate", link: "/donate" },
-      { label: "Contact Us", link: "/contact-us" },
+      { label: "Donate", link: "https://abujablazers.com/donate" },
+      { label: "Contact Us", link: "https://abujablazers.com/contact-us" },
     ],
   },
   {

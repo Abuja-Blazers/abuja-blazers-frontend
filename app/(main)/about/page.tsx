@@ -81,7 +81,7 @@ export default function AboutPage() {
             Shop the Merch
           </Link>
           <Link
-            href="/blazers"
+            href="https://abujablazers.com/blazers"
             className={clsx("btn rounded p-20 font-button uppercase border-[1.5px] border-grey-300 bg-grey-400")}
           >
             Meet the Squad

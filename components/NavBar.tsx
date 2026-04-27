@@ -9,13 +9,13 @@ import { useEffect, useState } from "react";
 import BlazersLogo from "@/app/assets/vectors/blazers-logo.svg";
 
 const links = [
-  { label: "The Squad", route: "/blazers" },
+  { label: "The Squad", route: "https://abujablazers.com/blazers" },
   { label: "Merch Store", route: "https://shop.abujablazers.com" },
   { label: "Player Market", route: "https://players.abujablazers.com" },
-  { label: "Soul's corner", route: "/curator" },
-  { label: "News & Media", route: "/news" },
-  { label: "Donate", route: "/donate" },
-];
+  { label: "Soul's corner", route: "https://abujablazers.com/curator" },
+  { label: "News & Media", route: "https://abujablazers.com/news" },
+  { label: "Donate", route: "https://abujablazers.com/donate" },
+]
 
 export const NavBar = () => {
   const pathname = usePathname();
@@ -34,7 +34,7 @@ export const NavBar = () => {
     <>
       <nav className="bg-grey-800 relative z-50">
         <div className="px-16 lg:px-30 mx-auto flex items-center justify-between">
-          <Link href="/">
+          <Link href="https://abujablazers.com/">
             <Image src={BlazersLogo} alt="Blazers Logo" width={68} className="object-cover h-auto" />
           </Link>
 

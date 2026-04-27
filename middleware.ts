@@ -16,20 +16,26 @@ export function middleware(request: NextRequest) {
 
   // Handle shop.abujablazers.com
   if (hostname === 'shop.abujablazers.com') {
-    if (!pathname.startsWith('/shop')) {
-      return NextResponse.rewrite(
-        new URL(`/shop${pathname === '/' ? '' : pathname}`, request.url)
-      )
+    if (pathname === '/') {
+      return NextResponse.rewrite(new URL('/shop', request.url))
     }
+    if (pathname.startsWith('/shop')) {
+      return NextResponse.next()
+    }
+    // Anything else → redirect back to main domain
+    return NextResponse.redirect(new URL(`https://abujablazers.com${pathname}`))
   }
 
   // Handle players.abujablazers.com
   if (hostname === 'players.abujablazers.com') {
-    if (!pathname.startsWith('/player-market')) {
-      return NextResponse.rewrite(
-        new URL(`/player-market${pathname === '/' ? '' : pathname}`, request.url)
-      )
+    if (pathname === '/') {
+      return NextResponse.rewrite(new URL('/player-market', request.url))
     }
+    if (pathname.startsWith('/player-market')) {
+      return NextResponse.next()
+    }
+    // Anything else → redirect back to main domain
+    return NextResponse.redirect(new URL(`https://abujablazers.com${pathname}`))
   }
 
   return NextResponse.next()
