@@ -73,7 +73,7 @@ export default function AboutPage() {
       <BottomCTA title="Join The Movement" description="">
         <div className="flex gap-10 items-center">
           <Link
-            href="/shop"
+            href="https://shop.abujablazers.com"
             className={clsx(
               "btn rounded p-20 font-button uppercase bg-stc-800 border-[.6px] border-stc-900 text-stc-200",
             )}

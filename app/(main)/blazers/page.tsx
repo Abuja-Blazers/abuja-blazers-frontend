@@ -53,7 +53,7 @@ export default function BlazersSquadPage() {
             />
           </div>
           <Link
-            href="/player-market"
+            href="https://players.abujablazers.com"
             className="btn max-h-fit bg-stc-800 border-[0.6] border-stc-900 p-10 rounded font-button uppercase justify-self-end"
           >
             View Profile

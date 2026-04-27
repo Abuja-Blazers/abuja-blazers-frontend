@@ -10,8 +10,8 @@ import BlazersLogo from "@/app/assets/vectors/blazers-logo.svg";
 
 const links = [
   { label: "The Squad", route: "/blazers" },
-  { label: "Merch Store", route: "/shop" },
-  { label: "Player Market", route: "/player-market" },
+  { label: "Merch Store", route: "https://shop.abujablazers.com" },
+  { label: "Player Market", route: "https://players.abujablazers.com" },
   { label: "Soul's corner", route: "/curator" },
   { label: "News & Media", route: "/news" },
   { label: "Donate", route: "/donate" },

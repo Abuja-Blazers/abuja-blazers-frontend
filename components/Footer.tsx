@@ -72,8 +72,8 @@ const footerNavigation = [
     title: "Explore",
     links: [
       { label: "The Squad", link: "/blazers" },
-      { label: "Merch Store", link: "/shop" },
-      { label: "Player Market", link: "/player-market" },
+      { label: "Merch Store", link: "https://shop.abujablazers.com" },
+      { label: "Player Market", link: "https://players.abujablazers.com" },
       { label: "Soul's Corner", link: "/curator" },
     ],
   },

@@ -134,7 +134,7 @@ function PlayerMarket() {
                   </TableCell>
                   <TableCell>
                     <Link
-                      href={`/player-market/${player.id}`}
+                      href={`https://players.abujablazers.com/${player.id}`}
                       aria-disabled
                       className="pointer-events-none btn p-10 inline-flex font-button text-stc-200 font-medium uppercase rounded-[3px] border border-stc-200 min-w-77"
                     >

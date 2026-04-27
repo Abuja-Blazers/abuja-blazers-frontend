@@ -40,7 +40,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex w-full lg:w-fit items-center gap-19">
-              <Link href="/shop" className="btn btn-primary uppercase px-18 py-20" title="Navigate to shop">
+              <Link href="https://shop.abujablazers.com" className="btn btn-primary uppercase px-18 py-20" title="Navigate to shop">
                 Shop the collection
               </Link>
               <Link href="/blazers" className="btn font-button gap-10" title="Navigate to Squad Information">
@@ -65,7 +65,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Official Store"
             title="Shop the Collection"
-            linkHref="/shop"
+            linkHref="https://shop.abujablazers.com"
             linkLabel="View All Products"
           />
 
@@ -99,7 +99,7 @@ export default function Home() {
           eyebrow="Transfer Market"
           title="Player Market"
           description="Explore available players, submit bids, and track transfer activity in real time."
-          linkHref="/player-market"
+          linkHref="https://players.abujablazers.com"
           linkLabel="All Listings"
         />
         <Table>
@@ -133,7 +133,7 @@ export default function Home() {
                 </TableCell>
                 <TableCell>
                   <Link
-                    href={`/player-market/${player.id}`}
+                    href={`https://players.abujablazers.com/${player.id}`}
                     className="pointer-events-none btn p-10 inline-flex font-button text-stc-200 font-medium uppercase rounded-[3px] border border-stc-200 min-w-77"
                   >
                     View
