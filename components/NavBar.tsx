@@ -95,7 +95,7 @@ export const NavBar = () => {
             href={route}
             className={clsx(
               "font-heading uppercase py-16 border-b border-grey-400 transition-all duration-300",
-              pathname === route ? "text-stc-200" : "text-grey-250 hover:text-stc-200",
+              isActive(route) ? "text-stc-200" : "text-grey-250 hover:text-stc-200",
               open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
             )}
             style={{ transitionDelay: open ? `${index * 50}ms` : "0ms" }}
